@@ -1,11 +1,11 @@
 #!/bin/bash
 #packes DEV
-apt install git -y && apt install composer -y && apt install docker.io -y
+apt install git composer docker.io docker-compose -y
 sudo gpasswd -a $USER docker
 newgrp docker
 
 #LAMP
-apt install mysql-server-8.0 -y && apt install apache2 -y && apt install phpmyadmin -y
+apt install mysql-server-8.0 apache2 phpmyadmin -y
 
 #sudo mysql -u root
 #CREATE USER 'admin'@'localhost' IDENTIFIED BY '814172050';
@@ -22,7 +22,11 @@ wget https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb && sudo dpkg -i dbeave
 
 wget https://dl3.cdn.filezilla-project.org/client/FileZilla_3.55.1_x86_64-linux-gnu.tar.bz2?h=OXVcRAq7FFa3osEEKEQmvw&x=1630374180 && tar -jxvf FileZilla_3.55.1_x86_64-linux-gnu.tar.bz2
 
-apt install flameshot -y && apt install kolourpaint -y && apt install wine -y
+apt install flameshot kolourpaint wine -y
 
-apt install remmina -y && apt install simplescreenrecorder -y
+apt install remmina simplescreenrecorder -y
 
+#IDE Delevoper
+wget https://code.visualstudio.com/docs/?dv=linux64_deb | sudo dpkg -i code_1.60.0-1630494279_amd64.deb
+
+apt install psensor -y
